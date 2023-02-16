@@ -1,6 +1,8 @@
 package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
@@ -45,6 +47,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         przygotujWidoki();
         adapterWidok=new AdapterWidok(this,wszystkieWidoki);
+        RecyclerView recyclerView=findViewById(R.id.recyclerView);
+        recyclerView.setAdapter(adapterWidok);
+        recyclerView.setLayoutManager(new GridLayoutManager(this,3));
 
     }
 }

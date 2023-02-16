@@ -8,6 +8,8 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     ArrayList<widok> wszystkieWidoki;
+    AdapterWidok adapterWidok;
+
 
     private void przygotujWidoki(){
         wszystkieWidoki=new ArrayList<>();
@@ -42,5 +44,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         przygotujWidoki();
+        adapterWidok=new AdapterWidok(this,wszystkieWidoki);
+
     }
 }
